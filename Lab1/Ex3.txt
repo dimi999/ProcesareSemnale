@@ -1,0 +1,3 @@
+a) Frecventa de esantionare 2000 HZ => intervalul de timp intre 2 esantioane 1/2000 s
+b) 1 ora de achizitie => 3600 de secunde => 3600 * 2000 = 72 * 10^5 esantioane
+   72 * 10^5 * 4 biti = 288 * 10^5 biti = 36 * 10^5 bytes = 3.4332275390625 MiB = 3.6MB

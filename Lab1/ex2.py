@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import scipy
 
 def sinusoidalSignal(time):
     return 0.5 * np.sin(400 * time)
@@ -8,7 +9,7 @@ def sinusoidalSignal2(time):
     return np.sin(800 * time)
 
 samples = np.linspace(0, 1, 1600)
-samples2 = np.linspace(0, 3, 200)
+samples2 = np.linspace(0, 3, 2000)
 values = sinusoidalSignal(samples)
 values2 = sinusoidalSignal2(samples2)
 
@@ -16,6 +17,9 @@ fig, axs = plt.subplots(2)
 fig.suptitle('Exercitiul 2 a, b')
 axs[0].plot(samples, values)
 axs[1].plot(samples2, values2)
+
+scipy.io.wavfile.write('semnal2a.wav', 1600, values)
+scipy.io.wavfile.write('semnal2b.wav', 2000, values2)
 
 for ax in axs.flat:
     ax.set_xlabel('timp')
@@ -39,6 +43,9 @@ fig, axs = plt.subplots(2)
 fig.suptitle('Exercitiul 2 c, d')
 axs[0].plot(samples, values)
 axs[1].plot(samples, values2)
+
+scipy.io.wavfile.write('semnal2c.wav', 2000, values)
+scipy.io.wavfile.write('semnal2d.wav', 2000, values2)
 
 for ax in axs.flat:
     ax.set_xlabel('timp')

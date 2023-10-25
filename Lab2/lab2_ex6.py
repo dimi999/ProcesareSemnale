@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Oct 19 17:33:12 2023
-
-@author: Andrei
-"""
-
 import matplotlib.pyplot as plt
 import numpy as np
 import scipy
@@ -24,10 +17,14 @@ values1 = sinSignal1(samples)
 values2 = sinSignal2(samples)
 values3 = sinSignal0(samples)
 
-
-
 fig, axs = plt.subplots(3)
 fig.suptitle('Exercitiul 6')
 axs[0].plot(samples, values1)
 axs[1].plot(samples, values2)
 axs[2].plot(samples, values3)
+
+for ax in axs.flat:
+    ax.set_xlabel('timp')
+    ax.set_ylabel('amplitudine')
+    
+plt.savefig('Ex6.pdf', format='pdf')

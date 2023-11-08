@@ -1,0 +1,1 @@
+Frecventa maxima este de 200 HZ => trebuie sa esantionam cu o frecventa de minim 400HZ

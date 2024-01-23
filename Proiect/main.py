@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 from PIL import Image
 
-img = np.array(Image.open('D:/procesareSemnale/Proiect/Tulsa.png').convert('L'))
+img = np.array(Image.open('D:/procesareSemnale/Proiect/pyramids-256.png').convert('L'))
 
 width, height = img.shape[1], img.shape[0]
 #img = cv2.imread("D:/procesareSemnale/Proiect/geometrydash.png", cv2.IMREAD_GRAYSCALE)
@@ -59,7 +59,7 @@ plt.figure()
 print(Accumulator[:16,:16],Accumulator[Accumulator>=100])
 #%%
 
-threshold_vote = 380 
+threshold_vote = 50 
 
 plt.imshow(img)
 
